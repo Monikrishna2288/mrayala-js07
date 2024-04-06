@@ -96,6 +96,12 @@ function searchForNameInTableRow(searchMessage)
 function searchTextFunction()
 {
     let searchMessage = document.getElementById('search-text').value;
-    searchMessage = searchMessage.trim().toLocaleLowerCase();
-    searchForNameInTableRow(searchMessage);
+    if(searchMessage !== "")
+    {
+        searchMessage = searchMessage.trim().toLocaleLowerCase();
+        searchForNameInTableRow(searchMessage);
+    }
+    else{
+        alert("No search key provided");
+    }
 }
